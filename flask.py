@@ -76,16 +76,11 @@ def result():
     var_1 = request.form.get("var_1", type=str)
     #print("Var 1 at line 60: ", var_1, request.form)
     var_3 = var_1
-    sent = nltk.word_tokenize(var_1)
-    sent = [w.replace('-', ' ') for w in sent]
-    sent = [each_string.lower() for each_string in sent]
-    print(sent, "from line 64")
+    
+    processed = Preprocess()
+    sent = processed.process(var_1)
     test =  ['contact lense production', 'complexity level', 'personalization']   #Default inputs
-    sent2 = nlp(var_1)
-    sent2 = list(sent2.sents)[0]
-
-
-    triples = BNP(sent2)            #Get all the relevant triples
+    triples = BNP(sent)            #Get all the relevant triples
  
     if 'contact lense production' in sent:
         sent = sent + test
