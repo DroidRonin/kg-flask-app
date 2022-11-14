@@ -2,7 +2,7 @@ import nltk
 import regex as re
 
 
-class Preprocess(): 
+class preprocess(): 
 
     def __init__(self, query):
         self.query = query
