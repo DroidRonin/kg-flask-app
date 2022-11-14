@@ -16,6 +16,6 @@ def preprocess(df):
 
 
 if __name__ == '__main__':
-    data = pd.read_csv("post2016papers.csv")      #Reading the csv file
+    data = pd.read_csv("...")      #Reading the csv file
     processed_data = preprocess(data)             #preprocessing the data   
     processed_data.to_csv("preprocessed.csv")    #Writing the new csv file (BM25 compatible)
