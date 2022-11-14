@@ -14,15 +14,11 @@ import networkx as nx
 import socket
 import nltk
 from Neo4J_API import *
-from gensim.models import Word2Vec
-from nltk.tokenize import word_tokenize
-from nltk.tag import pos_tag
-nltk.download('punkt')
-nltk.download('averaged_perceptron_tagger')
 
 
-HOST = '127.0.0.1'  # Standard loopback interface address (localhost)
-PORT = 65432        # Port to listen on (non-privileged ports are > 1023)
+
+HOST = ''  # Standard loopback interface address (localhost)
+PORT = ''        # Port to listen on (non-privileged ports are > 1023)
 
 
 app = Flask(__name__)
@@ -35,7 +31,7 @@ def query():                                 #Calls the elasticsearch API
     global var_1
     global articles
     global sent
-    api_url = "http://193.148.161.35:5601/invocations"
+    api_url = ""
     requestive = { "user_input": sent}
     response = requests.post(api_url, json=requestive)
     dict_ = response.json()
@@ -65,7 +61,7 @@ def welcome():
 
 @app.route('/result', methods=['POST', 'GET'])
 def result():
-    kg_df1 = pd.read_csv('C:\\Users\\SinghJasvinder-Ferdi\\Downloads\\FLASK_WebApp\\updated2.csv')
+    kg_df1 = pd.read_csv('')
     global var_1
     global search
     global concepts
