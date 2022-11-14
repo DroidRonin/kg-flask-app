@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>KG</title>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+	</head>
+
+	<body align=center>
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4"><legend><h1>Data Driven Solution Design</h1><h4>Welcome to the data driven solution explorer</h4></legend></div>
+			<div class="col-md-4"></div>
+		</div>
+	    </br>
+		<div class = "row">
+			<div class="col-md-4"></div>
+			<div class = "col-md-4"><legend><h4>Please specify your Problem and Solution Design below</h4></legend>
+			<div class="col-md-4"></div>
+		</div>
+		</div>
+			</br>
+
+			<div class="col-md-4"></div>
+				<div class="col-md-4">
+
+				<form class="form-horizontal" action={{ url_for('result') }}  method="post">
+					<div class="form-group">
+
+						<div class = "row">
+						<div class="col-xs-4"><h3>Opportunity Definition: </h3></div>
+						</div>
+						</br>
+						<div class = "row">
+						<label class="control-label col-xs-3" for="var_1">Query </br> (provide a detailed problem description):</label>
+						    <div class="col-xs-7">
+					<!--		<input type="text" class="form-control" style="width: 200px; height: 200px; word-wrap: break-word" name="var_1"  placeholder="xgboost"> -->
+							<textarea name="var_1" rows="10" cols="80" wrap="soft" maxlength="2000"></textarea>
+							</div>
+						</div>
+
+						<div class = "row">
+						<label class="control-label col-xs-3" for="var_2">Keywords </br> (separated by "," and "-", i.e. Machine-Production,</label>
+					        <div class="col-xs-7">
+					<!--		<input type="text" class="form-control" style="width: 200px; height: 200px; word-wrap: break-word" name="var_1"  placeholder="xgboost"> -->
+							<textarea name="var_2" rows="1" cols="80" wrap="soft" maxlength="500"></textarea>
+							</div>
+						</div>
+					<div class="form-group">
+						<div class="row">
+							<div class="col-xs-3"><h3>Dimensions: </h3></div>
+							<div class="col-xs-6">The solution...</div>
+						</div>
+
+						<div class="row">
+						<label class="control-label col-xs-3">Self-Determination: </br> </label>
+						</div>
+
+						<div class="form-group">
+							<div class="col-xs-12">
+								<input type="checkbox" id="humandependency" name="humandependency">
+								<label for="humandependency">is not dependent on humans  </label>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-xs-12">
+								<input type="checkbox" id="selfgoal" name="selfgoal">
+								<label for="selfgoal">defines its goals  </label>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-xs-12">
+								<input type="checkbox" id="selfgov" name="selfgov">
+								<label for="selfgov">defines its governance</label>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-xs-12">
+								<input type="checkbox" id="selfprocess" name="selfprocess">
+								<label for="selfprocess">defines its processes</label>
+							</div>
+						</div>
+
+						<div class="row">
+						<label class="control-label col-xs-3">Organization:</br> </label>
+						</div>
+
+						<div class="form-group">
+						<label class="control-label col-xs-6">is executing this task:</label>
+							<div class="col-xs-6">
+								<select class="form-control" name="some_variable">
+							<option>Classification_nonlinear</option>
+							<option>Clustering_linear</option>
+							<option>Regression</option>
+							<option>None</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="row">
+						<label class="control-label col-xs-3">Self-Organization:</label>
+						</div>
+
+						<div class="form-group">
+							<div class="col-xs-12">
+								<input type="checkbox" id="reinforce" name="reinforce">
+								<label for="reinforce">is reinforcing itself  </label>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-xs-12">
+								<input type="checkbox" id="selfselect" name="selfselect">
+								<label for="selfselect">is self selecting  </label>
+							</div>
+						</div>
+
+
+						<div class="row">
+						<label class="control-label col-xs-3">Data and Process Management:</label>
+						</div>
+
+						<div class="form-group">
+						<label class="control-label col-xs-6">accessing data:</label>
+							<div class="col-xs-6">
+								<select class="form-control" name="some_variable">
+							<option>fully</option>
+							<option>partially (no personal data)</option>
+							<option>None</option>
+								</select>
+							</div>
+						</div>
+						</br>
+
+						<div class="form-group">
+							<div class="col-xs-12">
+								<input type="checkbox" id="dataredundant" name="dataredudant">
+								<label for="dataredundant">requiring data redundancy </label>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-xs-12">
+								<input type="checkbox" id="dataheterogeneous" name="dataheterogeneous">
+								<label for="dataheterogeneous">accessing heterogeneous data </label>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-xs-12">
+								<input type="checkbox" id="infknoprocessing" name="infknoprocessing">
+								<label for="infknoprocessing">processing information and knowledge </label>
+							</div>
+						</div>
+
+
+						<div class="row">
+						<label class="control-label col-xs-3">Interaction:</label>
+						</div>
+
+						<div class="form-group">
+						<label class="control-label col-xs-6">requiring performance of:</label>
+							<div class="col-xs-6">
+								<select class="form-control" name="some_variable">
+							<option>real-time</option>
+							<option>near real-time</option>
+							<option>batch</option>
+							<option>none</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="form-group">
+						<label class="control-label col-xs-6">is performing quality of:</label>
+							<div class="col-xs-6">
+								<select class="form-control" name="some_variable">
+							<option>productive state</option>
+							<option>prototypical state</option>
+							<option>proof-of-concept state</option>
+							<option>none</option>
+								</select>
+							</div>
+						</div>
+				</div>
+
+
+						<div class="row">
+						<label class="control-label col-xs-3">Business Area:</label>
+						</div>
+
+					<div class="form-group">
+						<label class="control-label col-xs-6">applied in:</label>
+						<div class="col-xs-6">
+						<select class="form-control" name="some_variable">
+							<option>Healthcare</option>
+							<option>Production</option>
+							<option>Risk-Management</option>
+							<option>Mobility</option>
+							<option>None</option>
+						</select>
+						</div>
+					</div>
+
+					<div class="row">
+						<label class="control-label col-xs-3">System Orientation:</label>
+					</div>
+
+					<div class="form-group">
+						<label class="control-label col-xs-6">applied based on an architecture that is:</label>
+					<div class="col-xs-6">
+						<select class="form-control" name="orientation">
+							<option>Centralized</option>
+							<option>Decentralized</option>
+							<option>Fragmented</option>
+							<option>None</option>
+						</select>
+					</div>
+					</div>
+
+
+					<div class="row">
+						<label class="control-label col-xs-3">Approach:</label>
+					</div>
+
+					<div class="form-group">
+						 	<label class="control-label col-xs-6">applying:</label>
+						<div class="col-xs-6">
+							<select class="form-control" name="approach">
+								<option>Deep Learning</option>
+								<option>Machine Learning</option>
+								<option>Statistical Learning</option>
+								<option>Text Analysis</option>
+								<option>Geometry</option>
+								<option>None</option>
+							</select>
+						</div>
+						</div>
+
+					<button type="submit" class="btn btn-primary">Build Sub-Graph</button>
+					<a class='btn btn-primary' href="/query">Start Solution Design</a>
+				</form>
+					</div>
+
+<!--
+						<form method="GET">
+							<input name="classifier">
+							<input type="submit">
+						</form> -->
+
+
+
+
+
+
+			<!-- <caption> Business Area: </caption>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+				<label class="form-check-label" for="flexCheckDefault">
+				  Medicine
+				</label>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+				<label class="form-check-label" for="flexCheckDefault">
+				  Production
+				</label>
+			  </div>
+			  <caption> Problem Characteristics: </caption>
+			  <div class="form-check">
+				<input class="form-check-input" type="checkbox" value="classify" id="flexCheckChecked" checked>
+				<label class="form-check-label" for="flexCheckChecked">
+				  Classification
+				</label>
+			  </div>
+			  <div class="form-check">
+				<input class="form-check-input" type="checkbox" value="regress" id="flexCheckChecked" checked>
+				<label class="form-check-label" for="flexCheckChecked">
+				  Regression
+				</label>
+			  </div>
+
+
+			<caption> System Orientation: </caption>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+				<label class="form-check-label" for="flexCheckChecked">
+				  Centralized
+				</label>
+			  </div>
+			  <div class="form-check">
+				<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+				<label class="form-check-label" for="flexCheckChecked">
+				  Decentralized
+				</label>
+			  </div>
+			   -->
+
+			  <!-- <input type="checkbox" name="check" value="1">
+<input type="checkbox" name="check" value="2">
+<input type="checkbox" name="check" value="3"> -->
+
+			  </html>
+
+
