@@ -17,7 +17,6 @@ class CosineSimilarity():
                 try:
                         score = self.model.wv.similarity(i, j)   
                         if score > threshold:
-                            max_score = score
                             self.concepts = i
                             dataframe_min = self.dataframe[self.dataframe['source'] == self.concepts]  #Appending the entries with highest score to the new dataframe
                 except:
