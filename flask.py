@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, send_file, jsonify
 import pandas as pd
 from py2neo import Graph, Node, Relationship
-from triples import *
+from gettriples import *
 from preprocess import *
 from spellchecker import spellCheck
 from CosineSimilarity import *
