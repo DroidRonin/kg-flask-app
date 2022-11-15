@@ -21,5 +21,5 @@ class CosineSimilarity():
                             dataframe_min = self.dataframe[self.dataframe['source'] == self.concepts]  #Appending the entries with highest score to the new dataframe
                 except:
                         None
-        return dataframe_min
+        return dataframe_min, concepts
 
